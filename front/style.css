@@ -1,0 +1,17 @@
+html {
+  font-family: "Kosugi Maru", sans-serif;
+  background-color: transparent;
+  line-height: 1.7;
+  font-size: 20px;
+  overflow: hidden;
+}
+body {
+  margin: 0px;
+}
+
+.message {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2ex 1.5em;
+}

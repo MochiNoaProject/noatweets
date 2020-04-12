@@ -1,0 +1,23 @@
+{
+  "name": "noatweets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel ./front/index.html",
+    "build": "parcel build ./front/index.html"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.9.2",
+    "clsx": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-spring": "^8.0.27"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "now": "^17.1.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}
