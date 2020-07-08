@@ -1,9 +1,11 @@
+export type Tweet = {
+  text: string;
+}
+
 interface Response {
     result: {
         max_id: string
-        tweets: {
-            text: string
-        }[]
+        tweets: Tweet[]
     }
 }
 

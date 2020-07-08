@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import { animated, useTransition } from "react-spring"
 import clsx from "clsx"
-import { searchTweets } from "./api/searchTweets"
+import { searchTweets, Tweet } from "./api/searchTweets"
 import { sleep } from "./helper/sleep"
 
 let maxId = "0000000"
+
+export const filterTweets = (tweet: Tweet) => {
+  // unimplemented
+}
 
 const App: React.FC = () => {
     const [message, setMessage] = useState("")
