@@ -3,7 +3,7 @@ export type Tweet = {
 }
 
 /*
- * 引数に受け取った文字列からURLっぽいやつだけ消し飛ばす
+ * 引数に受け取った文字列からURLだけ消し飛ばす
  * @params raw: 消し飛ばす対象の文字列
  * @return rawからURLを消し飛ばした文字列 Ex. https://example.com https://example.com 共感できる…よね？←かわいい #のあといっしょ -> 共感できる…よね？←かわいい #のあといっしょ
  * 
