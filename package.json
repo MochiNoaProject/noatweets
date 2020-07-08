@@ -5,7 +5,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "parcel ./front/index.html",
-        "build": "parcel build ./front/index.html"
+        "build": "parcel build ./front/index.html",
+        "test": "yarn jest"
     },
     "dependencies": {
         "clsx": "^1.1.0",
