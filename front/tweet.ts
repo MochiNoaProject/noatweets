@@ -1,5 +1,5 @@
 export type Tweet = {
-  text: string;
+    text: string;
 }
 
 /*
@@ -9,30 +9,30 @@ export type Tweet = {
  * 
  */
 export const extractURLString = (raw: string) => {
-  const WEAK_URL_MATCHER = /(https?:\/\/[^ ]+)/g
-  const matches = raw.match(WEAK_URL_MATCHER);
+    const WEAK_URL_MATCHER = /(https?:\/\/[^ ]+)/g
+    const matches = raw.match(WEAK_URL_MATCHER);
 
-  if (matches) {
-    // matchesに入ってるURLはURLの疑惑があるだけで本物のURLではない可能性がある
-    // そのため、本当にそれがURLかどうかをチェックする
-    const validURLs = matches.filter(url => {
-      try {
-        new URL(url)
-        return true
-      } catch {
-        return false
-      }
-    })
-    return validURLs.reduce((acc, url) => acc.replace(url, '') , raw).trim()
-  }
+    if (matches) {
+        // matchesに入ってるURLはURLの疑惑があるだけで本物のURLではない可能性がある
+        // そのため、本当にそれがURLかどうかをチェックする
+        const validURLs = matches.filter(url => {
+            try {
+                new URL(url)
+                return true
+            } catch {
+                return false
+            }
+        })
+        return validURLs.reduce((acc, url) => acc.replace(url, '') , raw).trim()
+    }
 
-  return raw
+    return raw
 } 
 
 export const replaceTweet = (tweet: Tweet) => {
-  return extractURLString(tweet.text)
+    return extractURLString(tweet.text)
 }
 
 export const isHiddenText = (text: string) => {
-  return ["#のあといっしょ", ''].some(t => text.trim() === t)
+    return ["#のあといっしょ", ''].some(t => text.trim() === t)
 }
