@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom"
 import { animated, useTransition } from "react-spring"
 import clsx from "clsx"
-import { searchTweets, Tweet } from "./api/searchTweets"
+import { searchTweets } from "./api/searchTweets"
+import { replaceTweet, isHiddenText } from "./tweet"
 import { sleep } from "./helper/sleep"
 
-let maxId = "0000000"
 
-export const filterTweets = (tweet: Tweet) => {
-  // unimplemented
-}
+let maxId = "0000000"
 
 const App: React.FC = () => {
     const [message, setMessage] = useState("")
@@ -28,7 +26,11 @@ const App: React.FC = () => {
             const reponse = await searchTweets(maxId)
             maxId = reponse.result.max_id
             for (let tweet of reponse.result.tweets) {
-                setMessage(tweet.text)
+                const replacedTweet = replaceTweet(tweet);
+                if (isHiddenText(replacedTweet)) {
+                  break
+                }
+                setMessage(replacedTweet)
                 await sleep(5 * 1000)
             }
             setMessage("")

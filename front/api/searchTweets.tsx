@@ -1,6 +1,4 @@
-export type Tweet = {
-  text: string;
-}
+import { Tweet } from "../tweet"
 
 interface Response {
     result: {
