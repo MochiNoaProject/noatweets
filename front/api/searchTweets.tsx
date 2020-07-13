@@ -43,7 +43,7 @@ export const searchTweets = async (since_id: string) => {
             },
             body: JSON.stringify({
                 data: {
-                    text: `#${encodeURI("のあといっしょ")} -RT -https -http`,
+                    text: `#${encodeURI("のあといっしょ")} -RT`,
                     bearer: process.env.TOKEN,
                     since_id,
                 },
