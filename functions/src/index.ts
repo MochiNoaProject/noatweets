@@ -24,6 +24,7 @@ export const searchTweets = functions.https.onCall(async ({
           //@ts-ignore
           since: new Date().toFormat("YYYY-MM-DD"),
           since_id: since_id,
+          include_entries: true
         },
         json: true
       }, (err, _, data)=> {

@@ -1,9 +1,9 @@
+import { Tweet } from "../tweet"
+
 interface Response {
     result: {
         max_id: string
-        tweets: {
-            text: string
-        }[]
+        tweets: Tweet[]
     }
 }
 
