@@ -22,10 +22,10 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2",
     "firebase-functions-test": "^0.1.6",
-    "firebase-tools": "^8.0.2"
+    "firebase-tools": "^8.0.2",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
   },
   "private": true
 }
