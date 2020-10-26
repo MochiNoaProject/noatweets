@@ -34,5 +34,5 @@ export const replaceTweet = (tweet: Tweet) => {
 }
 
 export const isHiddenText = (text: string) => {
-    return ["#のあといっしょ", '#のあトニ'].some(t => text.trim() === t)
+    return ["#のあといっしょ", '#のあトニ', ''].some(t => text.trim() === t)
 }
